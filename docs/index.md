@@ -57,82 +57,97 @@ This workshop covers Azure Web Application Firewall from fundamentals to advance
 
 ## :books: Modules { #modules }
 
-<div class="module-grid" markdown>
+<div class="grid cards" markdown>
 
-<a class="module-card" href="modules/00-introduction/" markdown>
-### :wave: 00 — Introduction
-Workshop logistics, agenda, and introductions
-</a>
+-   :wave: **[00 — Introduction](modules/00-introduction.md)**
 
-<a class="module-card" href="modules/01-security-fundamentals/" markdown>
-### :lock: 01 — Security Fundamentals
-Zero Trust, shared responsibility, and threat landscape
-</a>
+    ---
 
-<a class="module-card" href="modules/02-waf-overview/" markdown>
-### :shield: 02 — Azure WAF Overview
-Features, benefits, and product suite
-</a>
+    Workshop logistics, agenda, and introductions
 
-<a class="module-card" href="modules/03-waf-policies/" markdown>
-### :gear: 03 — WAF Policies
-Configuration, modes, and Next-Gen Engine
-</a>
+-   :lock: **[01 — Security Fundamentals](modules/01-security-fundamentals.md)**
 
-<a class="module-card" href="modules/04-managed-rules/" markdown>
-### :bookmark_tabs: 04 — Managed Rules
-DRS 2.1, anomaly scoring, and rule groups
-</a>
+    ---
 
-<a class="module-card" href="modules/05-exclusions/" markdown>
-### :wrench: 05 — Exclusions & Tuning
-False positive tuning and best practices
-</a>
+    Zero Trust, shared responsibility, and threat landscape
 
-<a class="module-card" href="modules/06-custom-rules/" markdown>
-### :pencil2: 06 — Custom Rules
-Geo-filtering, rate limiting, and match conditions
-</a>
+-   :shield: **[02 — Azure WAF Overview](modules/02-waf-overview.md)**
 
-<a class="module-card" href="modules/07-bot-protection/" markdown>
-### :robot: 07 — Bot Protection
-Bot Manager, JavaScript Challenge
-</a>
+    ---
 
-<a class="module-card" href="modules/08-application-gateway/" markdown>
-### :globe_with_meridians: 08 — Application Gateway
-Regional WAF with App Gateway v2
-</a>
+    Features, benefits, and product suite
 
-<a class="module-card" href="modules/09-front-door/" markdown>
-### :earth_americas: 09 — Front Door
-Global edge WAF with Front Door Premium
-</a>
+-   :gear: **[03 — WAF Policies](modules/03-waf-policies.md)**
 
-<a class="module-card" href="modules/10-agc/" markdown>
-### :whale: 10 — AGC (Containers)
-Application Gateway for Containers with WAF
-</a>
+    ---
 
-<a class="module-card" href="modules/11-ddos/" markdown>
-### :no_entry_sign: 11 — DDoS Protection
-Layered defense strategy
-</a>
+    Configuration, modes, and Next-Gen Engine
 
-<a class="module-card" href="modules/12-monitoring/" markdown>
-### :bar_chart: 12 — Monitoring
-WAF Insights, logs, metrics, and KQL
-</a>
+-   :bookmark_tabs: **[04 — Managed Rules](modules/04-managed-rules.md)**
 
-<a class="module-card" href="modules/13-copilot-sentinel/" markdown>
-### :sparkles: 13 — Copilot & Sentinel
-AI-powered security operations
-</a>
+    ---
 
-<a class="module-card" href="modules/14-best-practices/" markdown>
-### :trophy: 14 — Best Practices
-Architecture decisions and landing zones
-</a>
+    DRS 2.1, anomaly scoring, and rule groups
+
+-   :wrench: **[05 — Exclusions & Tuning](modules/05-exclusions.md)**
+
+    ---
+
+    False positive tuning and best practices
+
+-   :pencil2: **[06 — Custom Rules](modules/06-custom-rules.md)**
+
+    ---
+
+    Geo-filtering, rate limiting, and match conditions
+
+-   :robot: **[07 — Bot Protection](modules/07-bot-protection.md)**
+
+    ---
+
+    Bot Manager, JavaScript Challenge
+
+-   :globe_with_meridians: **[08 — Application Gateway](modules/08-application-gateway.md)**
+
+    ---
+
+    Regional WAF with App Gateway v2
+
+-   :earth_americas: **[09 — Front Door](modules/09-front-door.md)**
+
+    ---
+
+    Global edge WAF with Front Door Premium
+
+-   :whale: **[10 — AGC (Containers)](modules/10-agc.md)**
+
+    ---
+
+    Application Gateway for Containers with WAF
+
+-   :no_entry_sign: **[11 — DDoS Protection](modules/11-ddos.md)**
+
+    ---
+
+    Layered defense strategy
+
+-   :bar_chart: **[12 — Monitoring](modules/12-monitoring.md)**
+
+    ---
+
+    WAF Insights, logs, metrics, and KQL
+
+-   :sparkles: **[13 — Copilot & Sentinel](modules/13-copilot-sentinel.md)**
+
+    ---
+
+    AI-powered security operations
+
+-   :trophy: **[14 — Best Practices](modules/14-best-practices.md)**
+
+    ---
+
+    Architecture decisions and landing zones
 
 </div>
 
@@ -168,8 +183,8 @@ All labs include **one-click Deploy to Azure** buttons and step-by-step instruct
 
 ```powershell
 # 1. Clone the repository
-git clone https://github.com/<your-org>/azure-waf-workshop.git
-cd azure-waf-workshop
+git clone https://github.com/lcarli/AzureWAF-Learning.git
+cd AzureWAF-Learning
 
 # 2. Login to Azure
 az login
