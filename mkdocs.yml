@@ -1,0 +1,124 @@
+site_name: "Azure WAF Workshop 2026"
+site_description: "WorkshopPLUS: Azure Web Application Firewall - Modern Edition"
+site_url: ""
+repo_url: ""
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Segoe UI
+    code: Cascadia Code
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.highlight
+    - search.share
+    - toc.follow
+  icon:
+    logo: material/shield-lock
+    repo: fontawesome/brands/github
+  custom_dir: docs/overrides
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Azure/Azure-Network-Security
+    - icon: fontawesome/brands/microsoft
+      link: https://learn.microsoft.com/azure/web-application-firewall/
+
+nav:
+  - Home: index.md
+  - Modules:
+    - "00 - Introduction": modules/00-introduction.md
+    - "01 - Security Fundamentals": modules/01-security-fundamentals.md
+    - "02 - Azure WAF Overview": modules/02-waf-overview.md
+    - "03 - WAF Policies": modules/03-waf-policies.md
+    - "04 - Managed Rules": modules/04-managed-rules.md
+    - "05 - Exclusions & Tuning": modules/05-exclusions.md
+    - "06 - Custom Rules": modules/06-custom-rules.md
+    - "07 - Bot Protection": modules/07-bot-protection.md
+    - "08 - Application Gateway": modules/08-application-gateway.md
+    - "09 - Front Door": modules/09-front-door.md
+    - "10 - AGC (Containers)": modules/10-agc.md
+    - "11 - DDoS Protection": modules/11-ddos.md
+    - "12 - Monitoring": modules/12-monitoring.md
+    - "13 - Copilot & Sentinel": modules/13-copilot-sentinel.md
+    - "14 - Best Practices": modules/14-best-practices.md
+  - Labs:
+    - "Lab Overview": labs/index.md
+    - "Infrastructure Setup": labs/setup.md
+    - "Lab 01 - Deploy AppGW WAF": labs/lab01.md
+    - "Lab 02 - Detection Mode": labs/lab02.md
+    - "Lab 03 - KQL Analysis": labs/lab03.md
+    - "Lab 03B - Triage Workbook": labs/lab03b.md
+    - "Lab 04 - Exclusions": labs/lab04.md
+    - "Lab 05 - Prevention Mode": labs/lab05.md
+    - "Lab 06 - Front Door WAF": labs/lab06.md
+    - "Lab 07 - Bot Protection": labs/lab07.md
+    - "Lab 08 - Rate Limiting": labs/lab08.md
+    - "Lab 09 - AGC WAF": labs/lab09.md
+    - "Lab 10 - Sentinel": labs/lab10.md
+    - "Lab 11 - Copilot": labs/lab11.md
+  - Resources:
+    - "KQL Query Library": resources/kql-queries.md
+    - "Scripts Reference": resources/scripts.md
+    - "Links & References": resources/references.md
