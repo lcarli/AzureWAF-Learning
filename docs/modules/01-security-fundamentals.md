@@ -96,19 +96,9 @@ Design every system as if an attacker is already inside the network. Minimize th
 
 ### Zero Trust Architecture Diagram
 
-```mermaid
-flowchart LR
-    subgraph "Zero Trust Network"
-        A[Client] -->|HTTPS| B[Azure WAF]
-        B -->|Inspect & Filter| C[Application Gateway / Front Door]
-        C -->|Verified Request| D[Backend App Service]
-        D -->|Row-Level Security| E[(Azure SQL)]
-    end
-    B -.->|Logs| S[Microsoft Sentinel]
-    S -.->|Alert / Playbook| SOC[SOC Analyst]
-    style B fill:#0078d4,color:#fff
-    style S fill:#5c2d91,color:#fff
-```
+![Azure WAF Zero Trust Architecture](../assets/zero-trust-architecture.png)
+
+*Architecture diagram showing how Azure WAF fits into a Zero Trust security model — from edge protection (DDoS + Front Door WAF) through network controls (Firewall + App Gateway WAF) to application-tier validation (Entra ID + encrypted data), with all WAF logs flowing to Log Analytics and Microsoft Sentinel for continuous monitoring.*
 
 ### How Azure WAF Enables Zero Trust — Summary
 
