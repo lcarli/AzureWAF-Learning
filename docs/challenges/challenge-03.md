@@ -17,6 +17,8 @@ An attacker from IP `203.0.113.77` has been probing your application with **mult
 
 ## :rocket: Generate Challenge Traffic
 
+:octicons-download-24: **Script**: [challenge-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1)
+
 ```powershell
 cd scripts/
 .\challenge-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -Challenge 3

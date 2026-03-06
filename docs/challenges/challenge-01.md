@@ -17,6 +17,8 @@ Your Azure WAF has detected a burst of **SQL injection attacks**. A single IP ad
 
 ## :rocket: Generate Challenge Traffic
 
+:octicons-download-24: **Script**: [challenge-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1)
+
 ```powershell
 cd scripts/
 .\challenge-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -Challenge 1

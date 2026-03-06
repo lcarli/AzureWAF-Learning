@@ -13,6 +13,8 @@ All labs include automated infrastructure deployment, step-by-step instructions,
 
 **:bulb: Pre-populate WAF Logs**: Before starting Lab 03, run the traffic simulator for at least 15 minutes to ensure WAF logs are available for analysis.
 
+:octicons-download-24: **Script**: [simulate-waf-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/simulate-waf-traffic.ps1)
+
 ```powershell
 .\scripts\simulate-waf-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -DurationMinutes 15
 ```
@@ -204,6 +206,8 @@ Use natural language to investigate WAF events and get tuning recommendations.
 ## :broom: Cleanup
 
 When finished with all labs, remove all resources:
+
+:octicons-download-24: **Script**: [cleanup.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/cleanup.ps1)
 
 ```powershell
 .\scripts\cleanup.ps1 -ResourceGroupName "rg-waf-workshop"

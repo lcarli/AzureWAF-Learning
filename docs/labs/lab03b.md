@@ -26,6 +26,8 @@ In this lab, you will:
 
 ## Part 1: Generate Sufficient WAF Data
 
+:octicons-download-24: **Script**: [simulate-waf-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/simulate-waf-traffic.ps1)
+
 Before deploying the workbooks, ensure there is enough WAF data for meaningful analysis.
 
 ### Step 1: Run the Traffic Simulator Against Application Gateway

@@ -17,6 +17,8 @@ An attacker from IP `172.16.99.5` is injecting **XSS payloads** into your applic
 
 ## :rocket: Generate Challenge Traffic
 
+:octicons-download-24: **Script**: [challenge-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1)
+
 ```powershell
 cd scripts/
 .\challenge-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -Challenge 5

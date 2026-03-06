@@ -155,7 +155,9 @@ Unknown bots are automated clients that do not match known good or bad bot patte
 
 2. Run the bot traffic simulation:
 
-   ```powershell
+   :octicons-download-24: **Script**: [generate-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1)
+
+```powershell
    .\generate-traffic.ps1 -TargetUrl "https://<endpoint>.azurefd.net" -AttackType Bot
    ```
 

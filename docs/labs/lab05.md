@@ -99,7 +99,9 @@ Now that the WAF is in Prevention mode, re-run the same attacks used in Lab 02 t
 
 2. Execute SQL injection attacks against the Application Gateway:
 
-   ```powershell
+   :octicons-download-24: **Script**: [generate-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1)
+
+```powershell
    .\generate-traffic.ps1 -TargetUrl "https://<appgw-public-ip>" -AttackType SQLi
    ```
 

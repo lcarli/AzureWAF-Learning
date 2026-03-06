@@ -133,6 +133,8 @@ Now use the provided `generate-traffic.ps1` script to send simulated attack traf
 Before running, examine what the script does:
 
 ```powershell
+:octicons-download-24: **Script**: [generate-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1)
+
 Get-Help .\scripts\generate-traffic.ps1 -Detailed
 ```
 

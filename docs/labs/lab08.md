@@ -307,7 +307,9 @@ az network front-door waf-policy show \
 
 2. Generate burst traffic that exceeds the rate limit:
 
-   ```powershell
+   :octicons-download-24: **Script**: [generate-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1)
+
+```powershell
    .\generate-traffic.ps1 -TargetUrl "https://<appgw-public-ip>" -AttackType RateLimit -Count 200
    ```
 

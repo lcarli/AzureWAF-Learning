@@ -33,6 +33,8 @@ az account set --subscription "<your-subscription-name>"
 
 ### Step 2: Deploy Infrastructure
 
+:octicons-download-24: **Script**: [deploy.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/infra/deploy.ps1)
+
 ```powershell
 cd infra/
 
@@ -85,6 +87,8 @@ You should see a response from one of the backend web apps.
     The analysis labs require WAF log data. Run the traffic simulator **before** starting Lab 03.
 
 ### Generate Traffic Against Application Gateway
+
+:octicons-download-24: **Script**: [simulate-waf-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/simulate-waf-traffic.ps1)
 
 ```powershell
 cd scripts/

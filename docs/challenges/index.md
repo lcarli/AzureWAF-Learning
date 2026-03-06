@@ -44,6 +44,8 @@ Test your Azure WAF investigation skills! Each challenge requires you to generat
     4. Submit your answer on the challenge page
 
 !!! info "Running Individual Challenges"
+    :octicons-download-24: **Script**: [challenge-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1)
+
     ```powershell
     # Run a specific challenge
     .\scripts\challenge-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -Challenge 1

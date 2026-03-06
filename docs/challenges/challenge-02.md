@@ -19,6 +19,8 @@ A specific WAF managed rule detected and flagged every single one of these reque
 
 ## :rocket: Generate Challenge Traffic
 
+:octicons-download-24: **Script**: [challenge-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1)
+
 ```powershell
 cd scripts/
 .\challenge-traffic.ps1 -TargetUrl "http://<your-appgw-fqdn>" -Challenge 2

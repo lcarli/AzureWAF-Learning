@@ -495,6 +495,8 @@ AzureDiagnostics
 
 Run the traffic generator to confirm that non-excluded attack patterns are still detected:
 
+:octicons-download-24: **Script**: [generate-traffic.ps1](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1)
+
 ```powershell
 .\scripts\generate-traffic.ps1 -TargetUrl "http://$APPGW_PIP" -AttackType All
 ```
