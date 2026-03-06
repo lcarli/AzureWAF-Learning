@@ -170,16 +170,20 @@ graph TB
 
 ## :moneybag: Cost Estimate
 
-| Resource | Approximate Cost/Day |
-|---|---|
-| Application Gateway WAF v2 (1 instance) | ~$8-12 |
-| Front Door Premium | ~$3-5 |
-| App Service Plan (B1) | ~$1 |
-| Log Analytics (PerGB) | ~$0.50 |
-| Public IPs | ~$0.50 |
-| **Total** | **~$15-25/day** |
+| Resource | Pricing Model | Approximate Cost/Day |
+|---|---|---|
+| Application Gateway WAF v2 | $0.443/hour (base) + capacity units | ~$11 |
+| Front Door Premium | $330/month base | ~$11 |
+| App Service Plan (B1 Linux) | $13.14/month | ~$0.50 |
+| Log Analytics (PerGB2018) | $2.76/GB ingested | ~$1-3 |
+| Public IPs (Standard) | $0.005/hour | ~$0.12 |
+| AGC Traffic Controller | Usage-based | ~$1-2 |
+| **Total** | | **~$25-30/day** |
+
+> Source: [Application Gateway Pricing](https://azure.microsoft.com/pricing/details/application-gateway/) · [Front Door Pricing](https://azure.microsoft.com/pricing/details/frontdoor/) · [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/)
 
 !!! danger "Remember to Clean Up!"
+    These resources cost **~$750-900/month** if left running. Always delete when finished:
     ```powershell
     .\scripts\cleanup.ps1 -ResourceGroupName "rg-waf-workshop"
     ```

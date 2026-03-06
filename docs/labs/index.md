@@ -214,4 +214,4 @@ When finished with all labs, remove all resources:
 ```
 
 !!! danger "Cost Warning"
-    Lab resources cost approximately **$15-25 USD/day**. Always clean up when finished.
+    Lab resources cost approximately **$25-30 USD/day** (~$750-900/month). Always clean up when finished.
