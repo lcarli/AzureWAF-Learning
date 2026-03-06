@@ -14,6 +14,7 @@ Centralized Layer 7 protection for your web applications with the latest Azure W
 
 [:octicons-rocket-24: Start Learning](#modules){ .md-button .md-button--primary }
 [:octicons-beaker-24: Jump to Labs](labs/index.md){ .md-button }
+[:octicons-trophy-24: Challenges](challenges/index.md){ .md-button }
 
 </div>
 
@@ -30,8 +31,8 @@ Centralized Layer 7 protection for your web applications with the latest Azure W
 </div>
 
 <div class="stat-card" markdown>
-<div class="number">89</div>
-<div class="label">Topics Covered</div>
+<div class="number">6</div>
+<div class="label">Challenges</div>
 </div>
 
 <div class="stat-card" markdown>
@@ -52,6 +53,46 @@ This workshop covers Azure Web Application Firewall from fundamentals to advance
 - :new: **Copilot for Security** — AI-powered WAF operations
 - :new: **Application Gateway for Containers** — Kubernetes-native WAF
 - :new: **WAF Insights** — Built-in analytics dashboard
+
+---
+
+## :compass: Choose Your Path
+
+<div class="grid cards" markdown>
+
+-   :rocket: **Full Workshop (New Infrastructure)**
+
+    ---
+
+    Deploy the lab infrastructure from scratch and follow all labs in order.
+
+    [:octicons-arrow-right-24: Deploy & Start](labs/setup.md)
+
+-   :wrench: **Bring Your Own WAF**
+
+    ---
+
+    Already have Application Gateway WAF or Front Door WAF? Skip the deploy — download the scripts and jump straight to any lab or challenge.
+
+    [:octicons-arrow-right-24: See instructions below](#bring-your-own-waf)
+
+-   :books: **Self-Study (Theory Only)**
+
+    ---
+
+    Read through the 15 modules as a learning resource — no Azure subscription needed.
+
+    [:octicons-arrow-right-24: Start with Module 01](modules/01-security-fundamentals.md)
+
+-   :trophy: **Challenges Only**
+
+    ---
+
+    Have a WAF running? Download the challenge script, generate traffic, and test your investigation skills.
+
+    [:octicons-arrow-right-24: Start Challenges](challenges/index.md)
+
+</div>
 
 ---
 
@@ -187,7 +228,46 @@ Test your WAF investigation skills! Run the challenge traffic generator, analyze
 
 ---
 
-## :rocket: Quick Start
+## :electric_plug: Bring Your Own WAF { #bring-your-own-waf }
+
+Already have an Application Gateway WAF or Front Door WAF in your environment? You don't need to deploy the workshop infrastructure — just download the scripts and point them at your WAF endpoint.
+
+### What you need
+
+- [x] An Application Gateway **WAF_v2** or Front Door **Premium** with a WAF Policy
+- [x] WAF diagnostic logs enabled and flowing to a **Log Analytics workspace**
+- [x] **PowerShell 7+** installed on your machine
+
+### Download the scripts
+
+| Script | Purpose | Download |
+|--------|---------|----------|
+| **generate-traffic.ps1** | One-shot attack simulation (for labs) | [:octicons-download-24: Download](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/generate-traffic.ps1) |
+| **simulate-waf-traffic.ps1** | Continuous traffic generator (pre-populate logs) | [:octicons-download-24: Download](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/simulate-waf-traffic.ps1) |
+| **challenge-traffic.ps1** | Deterministic traffic for challenges | [:octicons-download-24: Download](https://github.com/lcarli/AzureWAF-Learning/blob/main/scripts/challenge-traffic.ps1) |
+
+### Quick start with your own WAF
+
+```powershell
+# 1. Generate traffic against YOUR WAF endpoint
+.\simulate-waf-traffic.ps1 -TargetUrl "http://<your-waf-endpoint>" -DurationMinutes 15
+
+# 2. Wait 10 minutes for logs, then do any lab (e.g., Lab 03 - KQL Analysis)
+#    Just replace the endpoint URLs in the lab instructions with yours
+
+# 3. Or go straight to Challenges
+.\challenge-traffic.ps1 -TargetUrl "http://<your-waf-endpoint>" -Challenge All
+```
+
+!!! tip "Which labs work with your own WAF?"
+    | Works directly | Needs adaptation | Needs workshop infra |
+    |:-:|:-:|:-:|
+    | Lab 02, 03, 03B, 04, 05 | Lab 06, 07, 08 (adjust for your FD/AppGW) | Lab 01, 09, 10, 11 |
+    | All 6 Challenges | — | — |
+
+---
+
+## :rocket: Quick Start (New Infrastructure)
 
 ```powershell
 # 1. Clone the repository
