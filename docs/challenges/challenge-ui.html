@@ -1,0 +1,30 @@
+<style>
+.challenge-box{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:1rem 0}
+.challenge-input{flex:1;min-width:250px;padding:10px 14px;border:2px solid var(--md-default-fg-color--lightest);border-radius:6px;background:var(--md-code-bg-color);color:var(--md-default-fg-color);font-size:.95rem;font-family:'Cascadia Code',monospace;outline:none;transition:border-color .3s}
+.challenge-input:focus{border-color:#0078D4}
+.challenge-input:disabled{opacity:.7}
+.challenge-btn{padding:10px 20px;background:linear-gradient(135deg,#0078D4,#106EBE);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:.9rem;transition:all .2s}
+.challenge-btn:hover{background:linear-gradient(135deg,#106EBE,#005A9E);transform:translateY(-1px)}
+.challenge-result{width:100%;padding:8px 12px;border-radius:4px;font-size:.9rem;min-height:20px}
+.challenge-correct{background:rgba(16,124,16,.15);color:#107C10;border-left:3px solid #107C10}
+.challenge-wrong{background:rgba(209,52,56,.15);color:#D13438;border-left:3px solid #D13438}
+.challenge-warn{background:rgba(255,185,0,.15);color:#FFB900;border-left:3px solid #FFB900}
+</style>
+
+<script>
+async function sha256(m){const b=new TextEncoder().encode(m);const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function checkAnswer(expectedHash){
+  const input=document.getElementById('challenge-answer');
+  const result=document.getElementById('challenge-result');
+  const answer=input.value.trim().toLowerCase();
+  if(!answer){result.innerHTML='⚠️ Please enter an answer';result.className='challenge-result challenge-warn';return}
+  const hash=await sha256(answer);
+  if(hash===expectedHash){
+    result.innerHTML='✅ Correct! Great investigation work!';result.className='challenge-result challenge-correct';
+    input.disabled=true;input.style.borderColor='#107C10';
+  }else{
+    result.innerHTML='❌ Incorrect. Check the WAF logs and try again.';result.className='challenge-result challenge-wrong';
+    input.style.borderColor='#D13438';setTimeout(()=>{input.style.borderColor=''},2000);
+  }
+}
+</script>

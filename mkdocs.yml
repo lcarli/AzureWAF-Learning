@@ -120,7 +120,13 @@ nav:
     - "Lab 10 - Sentinel": labs/lab10.md
     - "Lab 11 - Copilot": labs/lab11.md
   - Challenges:
-    - "🏆 WAF Challenges": challenges/index.md
+    - "Overview": challenges/index.md
+    - "01 - Identify the Attacker": challenges/challenge-01.md
+    - "02 - Name the Rule": challenges/challenge-02.md
+    - "03 - The Secret Path": challenges/challenge-03.md
+    - "04 - Bot Detective": challenges/challenge-04.md
+    - "05 - The Poisoned Parameter": challenges/challenge-05.md
+    - "06 - Count the Scanners": challenges/challenge-06.md
   - Resources:
     - "KQL Query Library": resources/kql-queries.md
     - "Scripts Reference": resources/scripts.md
