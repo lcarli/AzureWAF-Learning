@@ -179,6 +179,14 @@ All labs include **one-click Deploy to Azure** buttons and step-by-step instruct
 
 ---
 
+## :trophy: Challenges
+
+Test your WAF investigation skills! Run the challenge traffic generator, analyze the logs, and answer 6 questions with real-time validation.
+
+[:octicons-trophy-24: Start Challenges](labs/challenges.md){ .md-button .md-button--primary }
+
+---
+
 ## :rocket: Quick Start
 
 ```powershell

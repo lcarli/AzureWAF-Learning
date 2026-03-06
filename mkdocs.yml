@@ -119,6 +119,7 @@ nav:
     - "Lab 09 - AGC WAF": labs/lab09.md
     - "Lab 10 - Sentinel": labs/lab10.md
     - "Lab 11 - Copilot": labs/lab11.md
+    - "🏆 Challenges": labs/challenges.md
   - Resources:
     - "KQL Query Library": resources/kql-queries.md
     - "Scripts Reference": resources/scripts.md
